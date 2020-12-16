@@ -12,6 +12,7 @@ class Game {
   }
 
   update(state){
+    console.log("inside game.update");
     database.ref('/').update({
       gameState: state
     });
@@ -69,12 +70,15 @@ class Game {
 
         if (index === player.index){
           cars[index - 1].shapeColor = "red";
+          stroke(10);
+          fill("red");
+          ellipse(x,y,60,60);
           camera.position.x = displayWidth/2;
           camera.position.y = cars[index-1].y
         }
        
         //textSize(15);
-        //text(allPlayers[plr].name + ": " + allPlayers[plr].distance, 120,display_position)
+        //ellipse(allPlayers[plr].name + ": " + allPlayers[plr].distance, 120,display_position)
       }
       if(player.distance>=4000){
         console.log("dist 4000");
