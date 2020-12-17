@@ -10,6 +10,8 @@ var form, player, game;
 
 var cars, car1, car2, car3, car4;
 
+var rank;
+
 function preload(){
   car1Img=loadImage("images/car1.png");
   car2Img=loadImage("images/car2.png");
